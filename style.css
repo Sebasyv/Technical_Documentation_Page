@@ -1,0 +1,50 @@
+#navbar{
+    border-right: solid;
+    line-height: 0.9;
+    position: fixed;
+    width: 200px;
+    border-right: solid;
+    height: 100%;
+    }
+
+hr{
+    margin: 2px;
+    color:black;
+    border: solid black;
+}
+
+body{
+    background-color: #563D7C;
+    color:white;
+}
+
+.display-3{
+    color: #FFE484;
+}
+
+pre{
+    color: lightcoral;
+    background-color: thistle;
+}
+
+code{
+    align-items: left;
+}
+
+img {
+    max-width: 90%;
+}
+
+@media screen and (max-width:700px){
+#main-doc{
+    margin-top: 250px;
+}
+
+
+#navbar{
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+}
+

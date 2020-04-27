@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Bootstrap</title>
+</head>
+<body>
+    <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 col-lg-2">
+                        <nav id="navbar">
+                            <header><h2>Bootstrap</h2></header><hr>
+                            <a class="nav-link" href="#Container" nav-link>Container</a><hr>
+                            <a class="nav-link" href="#Sistema Grid" nav-link>Sistema Grid</a><hr>
+                            <a class="nav-link" href="#Aliniamientos" nav-link>Aliniamientos</a><hr>
+                            <a class="nav-link" href="#Tipografias" nav-link>Tipografias</a><hr>
+                            <a class="nav-link" href="#Notaciones" nav-link>Notaciones</a><hr>
+                        </nav>
+                    </div>
+                    <div class="col-sm-12 col-lg-10">
+                        <main id="main-doc" media="screen">
+                            <section class="main-section" id="Container"></section>
+                                <header class="display-3">Container</header>
+                                    <p><h4>Container:</h4> Crea marganeres a la derecha y a la izquierda.</p>
+                                        <pre class="language-html">
+                                            <code class=" language-html" >
+                        div class="container">
+                            !-- aquí se pone el contenido-->
+                        /div>
+                                            </code>
+                                        </pre>
+                                    <p><h4>Container-fluid:</h4> Ocupa la totalidad de la pantalla.</p>
+                                        <pre class="language-html">
+                                            <code class=" language-html" >
+                        div class="container-fluid">
+                            !-- aquí se pone el contenido-->
+                        /div>
+                                            </code>
+                                        </pre>
+                            <section class="main-section" id="Sistema Grid"></section>
+                                <header class="display-3">Sistema Grid</header>
+                                    <p>El sistema grid esta basado en dividir la pantalla en 12 columnas, estas se pueden juntar a su vez para dividirla en otro numero de columnas mucho mas pequeño pero haciendo el tamaño de estas mucho mayor como 4 o 3 tomando en cuenta que se deben dividir en numeros enteros.Por ejemplo en 6, 4, 3, 2</p>
+                                    <p>Para poder empezar a trabajar con el sistema grid se deben generar primero filas con la clase row</p>
+                                        <pre class="language-html">  
+                                        <code class=" language-html" >
+                                div class="container">
+                                div class="row">
+                                div class="col-sm">
+                                    One of three columns
+                                /div>
+                                div class="col-sm">
+                                    One of three columns
+                                /div>
+                                div class="col-sm">
+                                    One of three columns
+                                /div>
+                            /div>
+                            /div>    
+                                        </code>                
+                                        </pre>
+                                    <p>Si se desea separar las 12 columnas de una forma en la que sea por ejemplo 2 columnas de 4.5 y una columna de 3, se debera crear un row primero que dbivida las columnas una de 9 y una de 3 para luego generar un nuevo row que este a su vez se divira en 2 partes de 6 columnas cada una.</p>
+                                    <p>Existen 4 clases adicionales de col-# las cuales nos permitiran crear desarrollos responsives estos son: </p>
+                                        <ul>
+                                            <li>.col-sm para pantallas mayores a 576px </li>
+                                            <li>.col-md para pantallas mayores a 786px</li>
+                                            <li>.col-lg para pantallas mayores a 992px</li>
+                                            <li>.col-lx para pantallas mayores a 1200px</li>
+                                        </ul>
+                            <section class="main-section" id="Aliniamientos"></section>
+                                <header class="display-3">Alineamientos</header>
+                                    <p>Existen dos tipos de alinamientos, estos son</p>
+                                    <h4>Alineamiento Vertical:</h4><p>Nos permite alinear nuestros parrafos o imagenes a la parte superior, en el medio o en la parte inferior de nuestro contenedor.</p>
+                                        <ul>
+                                            <li>align-items-start  para ubicarnos en la parte superior</li>
+                                            <li>align-items-center para ubicarnos en la parte central</li>
+                                            <li>align-items-end para ubicarnos en la parte inferior</li>
+                                        </ul>
+                                            <p><b>Nota:</b><i>Si solo deseamos alinear una sola de las columnas debemos cambiar el alig-items por align-self</i></p>
+                                            <pre class="language-html">  
+                                                <code class=" language-html" >
+
+                    div class="container">
+                        div class="row align-items-start">
+                            div class="col">
+                                One of three columns
+                            /div>
+                            div class="col">
+                            One of three columns
+                            /div>
+                            div class="col">
+                                One of three columns
+                            /div>
+                            /div>
+                            div class="row align-items-center">
+                            div class="col">
+                                One of three columns
+                            /div>
+                            div class="col">
+                                One of three columns
+                            /div>
+                            div class="col">
+                                One of three columns
+                            /div>
+                            /div>
+                            div class="row align-items-end">
+                            div class="col">
+                                One of three columns
+                            /div>
+                            div class="col">
+                                One of three columns
+                            /div>
+                            div class="col">
+                                One of three columns
+                            /div>
+                            /div>
+                            /div>
+                                            </code>
+                                        </pre>
+                                        <img src="images/alinamientos.PNG">
+                                    <h4>Alineamiento horizontal:</h4><p>Nos permite alinear nuestros parrafos o imagenes a la parte izquierda, en el medio o en la parte derecha de nuestro contenedor.</p>
+                                        <ul>
+                                            <li>justify-content-start para ubicarnos en la parte superior</li>
+                                            <li>justify-content-center para ubicarnos en la parte central</li>
+                                            <li>justify-content-end para ubicarnos en la parte inferior</li>
+                                            <li>justify-content-between para ubicar los elementos separados a la misma distancia del centro</li>
+                                            <li>justify-content-around para ubicarlos elementos a una misma distancia de los margenes y de otros elementos</li>
+                                        </ul>
+                            <section class="main-section" id="Tipografias"></section>
+                                <header class="display-3">Tipografias</header>
+                                    <p>Bootstrap cuenta con unas tipografias especiales las cuales son llamadas Display estas van desde display 1 hasta display 4, siendo display 1 la mas grande y display 4 la mas pequeña, para esta creamos una class display-#. </p>
+                                    <section></section>
+                                    <div class="row">
+                                    <div class="col-sm-12 col-md-6">
+                                    <p class="h1">h1. Bootstrap heading</p>
+                                    <p class="h2">h2. Bootstrap heading</p>
+                                    <p class="h3">h3. Bootstrap heading</p>
+                                    <p class="h4">h4. Bootstrap heading</p>
+                                    <p class="h5">h5. Bootstrap heading</p>
+                                    <p class="h6">h6. Bootstrap heading</p>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <pre class="language-html">  
+                                <code class=" language-html">
+    p class="h1">h1. Bootstrap heading /p>
+    p class="h2">h2. Bootstrap heading /p>
+    p class="h3">h3. Bootstrap heading /p>
+    p class="h4">h4. Bootstrap heading /p>
+    p class="h5">h5. Bootstrap heading /p>
+    p class="h6">h6. Bootstrap heading /p>
+                                </code>
+                                        </pre>
+                                    </div>
+                                    </div>
+                            <section class="main-section" id="Notaciones"></section>
+                                <header class="display-3">Notaciones</header>
+                                    <p>Bootstrap cuenta con unas notaciones especificas que nos permiten poner margenes o paddings poniendo solo la clase m-# o la clase p-# cambiando el signo numeral por 1 hasta el 5 dependiendo del tamaño que se desea agregar. </p>
+                                    <p>adicional se le pueden agregar una letra seguida de la m o la p para especificar un solo lado o superior e inferior y derecha e izquierda.
+                                        <ul>
+                                            <li>t arriba</li>
+                                            <li>b abajo</li>
+                                            <li>l izquierda</li>
+                                            <li>r derecha</li>
+                                            <li>x para  el lado derecho y el izquierdo</li>
+                                            <li>y para  el lado superior e inferior</li>
+                                        </ul>
+                                    </p>
+                        </main>
+                    </div>
+             </div>
+    </div>
+</body>
+</html>
